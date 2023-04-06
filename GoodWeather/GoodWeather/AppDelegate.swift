@@ -14,6 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //UINavigationBarAppearance - ios 15이후부터는 standardAppearance, scrollEdgeAppearance를 통해 navigation appearance에 대해 일괄적으로 적용이 가능하다.
+        
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        
+        // navigation Large title에 대해 컬러 일괄적용 가능
+        // if statust bar color .white chnage -> info.plist(View controller-based status bar appearance), status bar style 변경
+        navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        navigationBarAppearance.backgroundColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        
+        UIBarButtonItem.appearance().tintColor = .white
         return true
     }
 
