@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()
         
-        // navigation Large title에 대해 컬러 일괄적용 가능
+        // navigation Large, text title에 대해 컬러 일괄적용 가능(큰글자, 작은 글자 구분된다.)
         // if statust bar color .white chnage -> info.plist(View controller-based status bar appearance), status bar style 변경
         navigationBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
         navigationBarAppearance.backgroundColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
         
