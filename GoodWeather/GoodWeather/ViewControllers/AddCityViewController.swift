@@ -10,5 +10,13 @@ import UIKit
 
 class AddCityViewController: UIViewController{
     
+    @IBOutlet weak var cityNameTextField: UITextField!
     
+    @IBAction func saveButtonClicked(){
+        
+    }
+    
+    @IBAction func closeButtonClicked(){
+        self.dismiss(animated: true)
+    }
 }

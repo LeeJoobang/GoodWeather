@@ -75,14 +75,49 @@
                     <view key="view" contentMode="scaleToFill" id="Awe-Eu-jAd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cih-Ds-dfd">
+                                <rect key="frame" x="16" y="78" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="jkR-KU-ZMD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgo-r2-9Oo">
+                                <rect key="frame" x="166" y="120" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked" destination="HQl-Qh-fOR" eventType="touchUpInside" id="TpB-AM-8bC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6T5-bf-woq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cih-Ds-dfd" firstAttribute="top" secondItem="6T5-bf-woq" secondAttribute="top" constant="22" id="3Wd-vE-Vnz"/>
+                            <constraint firstItem="6T5-bf-woq" firstAttribute="bottom" secondItem="Rgo-r2-9Oo" secondAttribute="bottom" constant="594" id="AlI-O3-2cd"/>
+                            <constraint firstItem="cih-Ds-dfd" firstAttribute="centerX" secondItem="Rgo-r2-9Oo" secondAttribute="centerX" id="Dqz-wc-9W6"/>
+                            <constraint firstItem="Rgo-r2-9Oo" firstAttribute="top" secondItem="cih-Ds-dfd" secondAttribute="bottom" constant="8" id="F75-JV-BDR"/>
+                            <constraint firstItem="cih-Ds-dfd" firstAttribute="trailing" secondItem="Awe-Eu-jAd" secondAttribute="trailingMargin" id="UDa-bt-fVh"/>
+                            <constraint firstItem="cih-Ds-dfd" firstAttribute="leading" secondItem="Awe-Eu-jAd" secondAttribute="leadingMargin" id="W9A-4D-Rbx"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="RsW-FA-TmE"/>
+                    <navigationItem key="navigationItem" title="Add City" id="RsW-FA-TmE">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="nRW-rd-xHI">
+                            <connections>
+                                <action selector="closeButtonClicked" destination="HQl-Qh-fOR" id="XOZ-x2-234"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="cih-Ds-dfd" id="8dd-XF-vem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8I-O7-0tr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614.5038167938928" y="26.760563380281692"/>
+            <point key="canvasLocation" x="2612.9770992366412" y="26.760563380281692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1jG-Ju-SHz">
