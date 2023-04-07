@@ -1,0 +1,38 @@
+# .gitignore
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+DerivedData/
+.idea/
+*.moved-aside
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager
+.build/
+Packages/
+.Package.pins
+*.xcodeproj
+
+# Carthage
+Carthage/
+*.framework
+
+# CocoaPods
+Pods/
+*.xcworkspace
+Podfile.lock
+
+# Sensitive information
+APIKey.swift
+Secrets.plist
+
