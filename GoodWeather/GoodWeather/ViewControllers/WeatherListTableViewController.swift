@@ -14,7 +14,8 @@ class WeatherListTableViewController: UITableViewController{
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         // if navigation controller의 color를 공통적으로 바꾸고 싶다면?
-        // appdelegate 
+        // appdelegate
+        // webservice load를 직접 viewcontroller에서 호출하는 것은 적절치 못함 + 대신 뷰모델에 넣음
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

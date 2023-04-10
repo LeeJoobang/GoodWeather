@@ -15,24 +15,15 @@ class AddCityViewController: UIViewController{
     // 그래서 static을 사용해 처리한 것이다. 16번째 줄은 필요없으나 기억을 위해 남겨둠.
     let api = APIKey()
     @IBOutlet weak var cityNameTextField: UITextField!
-    
     @IBAction func saveButtonClicked(){
         if let city = cityNameTextField.text {
-            
-            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(APIKey.key)&units=metric")!// 서울은 섭씨 고정값으로 둔다.
-            print(weatherURL)
+            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(APIKey.key)&units=metric")!// 서울은 섭씨 고정값으로 둔다. &units=metric
             let weatherResource = Resource<Any>(url: weatherURL) { data in
                 return data
             }
             WebService().load(resource: weatherResource) { result in
-                
             }
-            
-        }
-        
-        
-        
-        
+        } 
     }
     
     @IBAction func closeButtonClicked(){
